@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portal del Congreso Internacional de Ingeniería en Sistemas e IoT: fechas, sede, registro y pagos."
+    />
+    <title>
+      Inicio | Congreso Internacional de Ingeniería en Sistemas e IoT
+    </title>
+
+    <!-- Tipografías (si no cargan, se usan las alternativas definidas en el CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="pagina-inicio">
+    <a class="saltar-contenido" href="#contenido-principal"
+      >Saltar al contenido</a
+    >
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="sitio-encabezado" id="sitio-encabezado">
+      <div class="contenedor barra-nav">
+        <a class="logo" href="index.html">Congreso SysIoT 2026</a>
+        <nav aria-label="Navegación principal">
+          <ul class="menu-principal" id="menu-principal">
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="ponencias.html">Ponencias</a></li>
+            <li><a href="memoria.html">Memoria</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li>
+              <a class="enlace-registro" href="registro.html">Registro</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <!-- HERO BANNER -->
+      <section class="hero" id="hero">
+        <div class="contenedor hero-contenido">
+          <h1>Congreso Internacional de Ingeniería en Sistemas e IoT</h1>
+          <p class="hero-descripcion">
+            Tres días para presentar investigación, compartir proyectos y
+            conectar con quienes construyen la próxima generación de sistemas
+            conectados.
+          </p>
+
+          <ul class="hero-datos" id="hero-datos">
+            <li>
+              <strong>12 al 14 de noviembre de 2026</strong
+              ><span>Fechas del evento</span>
+            </li>
+            <li>
+              <strong>Centro de Convenciones Tecnológico</strong
+              ><span>Edificio A, Auditorio Magno</span>
+            </li>
+          </ul>
+
+          <div class="hero-acciones">
+            <a
+              class="btn btn-principal"
+              id="btn-registro-pago"
+              href="registro.html"
+              >Registro y pago</a
+            >
+            <div class="metodo-pago">
+              <span>Pago seguro con</span>
+              <!-- Imagen estática; sin funcionalidad por ahora -->
+              <img
+                class="logo-paypal"
+                id="logo-paypal"
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+                alt="Logotipo de PayPal"
+                width="90"
+                height="28"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFORMACIÓN GENERAL -->
+      <section class="seccion" id="informacion-general">
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <h2>Qué encontrarás en el congreso</h2>
+            <p>
+              Un espacio para ponentes y asistentes del ámbito académico y
+              profesional.
+            </p>
+          </div>
+          <div class="rejilla-info">
+            <article class="tarjeta">
+              <h3>Para ponentes</h3>
+              <p>
+                Presenta tu investigación o proyecto ante un público
+                especializado y publícalo en la memoria del congreso.
+              </p>
+            </article>
+            <article class="tarjeta">
+              <h3>Para participantes</h3>
+              <p>
+                Asiste a conferencias, talleres prácticos y sesiones de redes en
+                modalidad presencial o virtual.
+              </p>
+            </article>
+            <article class="tarjeta">
+              <h3>Temas principales</h3>
+              <p>
+                Internet de las cosas, ciberseguridad, computación en la nube,
+                inteligencia artificial en el borde y sistemas embebidos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="sitio-pie" id="sitio-pie">
+      <div class="contenedor pie-contenido">
+        <div>
+          <p>
+            <strong
+              >Congreso Internacional de Ingeniería en Sistemas e IoT</strong
+            >
+          </p>
+          <p>
+            12 al 14 de noviembre de 2026 · Centro de Convenciones Tecnológico
+          </p>
+        </div>
+        <div>
+          <p>
+            Contacto:
+            <a href="mailto:contacto@congreso-sysiot.example"
+              >contacto@congreso-sysiot.example</a
+            >
+          </p>
+          <ul class="pie-enlaces">
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

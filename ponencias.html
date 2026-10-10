@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Listado de ponencias aceptadas del congreso."
+    />
+    <title>
+      Ponencias | Congreso Internacional de Ingeniería en Sistemas e IoT
+    </title>
+
+    <!-- Tipografías (si no cargan, se usan las alternativas definidas en el CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="pagina-ponencias">
+    <a class="saltar-contenido" href="#contenido-principal"
+      >Saltar al contenido</a
+    >
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="sitio-encabezado" id="sitio-encabezado">
+      <div class="contenedor barra-nav">
+        <a class="logo" href="index.html">Congreso SysIoT 2026</a>
+        <nav aria-label="Navegación principal">
+          <ul class="menu-principal" id="menu-principal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="ponencias.html" aria-current="page">Ponencias</a></li>
+            <li><a href="memoria.html">Memoria</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li>
+              <a class="enlace-registro" href="registro.html">Registro</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section class="cabecera-pagina">
+        <div class="contenedor">
+          <h1>Ponencias</h1>
+          <p>Investigación y proyectos seleccionados para esta edición.</p>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <div class="rejilla-ponencias" id="lista-ponencias">
+            <article
+              class="tarjeta ponencia-card"
+              id="p-001"
+              data-area="Seguridad y redes"
+            >
+              <span class="badge">Seguridad y redes</span>
+              <h3>Redes LoRaWAN para riego inteligente</h3>
+              <p class="ponencia-autor">
+                Dra. Mariana Ortega · Universidad Politécnica de Occidente
+              </p>
+              <p class="ponencia-resumen">
+                Diseño y validación de una red de sensores de humedad que redujo
+                el consumo de agua en parcelas de prueba.
+              </p>
+              <a
+                class="btn btn-secundario"
+                href="ponencia-detalle.html?id=p-001"
+                >Ver detalle</a
+              >
+            </article>
+            <article
+              class="tarjeta ponencia-card"
+              id="p-002"
+              data-area="Ciberseguridad"
+            >
+              <span class="badge">Ciberseguridad</span>
+              <h3>Arranque seguro en microcontroladores de bajo costo</h3>
+              <p class="ponencia-autor">
+                M.C. Luis Herrera · Instituto Tecnológico Regional
+              </p>
+              <p class="ponencia-resumen">
+                Propuesta de cadena de confianza para actualizar firmware sin
+                comprometer la integridad del dispositivo.
+              </p>
+              <a
+                class="btn btn-secundario"
+                href="ponencia-detalle.html?id=p-002"
+                >Ver detalle</a
+              >
+            </article>
+            <article
+              class="tarjeta ponencia-card"
+              id="p-003"
+              data-area="Inteligencia artificial"
+            >
+              <span class="badge">Inteligencia artificial</span>
+              <h3>Clasificación de vibraciones con TinyML</h3>
+              <p class="ponencia-autor">
+                Ing. Paola Segura · Centro de Investigación en Cómputo
+              </p>
+              <p class="ponencia-resumen">
+                Modelo compacto que detecta fallas en motores directamente en el
+                sensor, sin depender de la nube.
+              </p>
+              <a
+                class="btn btn-secundario"
+                href="ponencia-detalle.html?id=p-003"
+                >Ver detalle</a
+              >
+            </article>
+            <article
+              class="tarjeta ponencia-card"
+              id="p-004"
+              data-area="Industria 4.0"
+            >
+              <span class="badge">Industria 4.0</span>
+              <h3>Gemelo digital de una línea de empaque</h3>
+              <p class="ponencia-autor">
+                Dr. Andrés Villalobos · Universidad Nacional de Ingeniería
+              </p>
+              <p class="ponencia-resumen">
+                Simulación sincronizada con telemetría real para anticipar
+                cuellos de botella en producción.
+              </p>
+              <a
+                class="btn btn-secundario"
+                href="ponencia-detalle.html?id=p-004"
+                >Ver detalle</a
+              >
+            </article>
+            <article
+              class="tarjeta ponencia-card"
+              id="p-005"
+              data-area="Protocolos IoT"
+            >
+              <span class="badge">Protocolos IoT</span>
+              <h3>MQTT frente a CoAP: latencia y consumo energético</h3>
+              <p class="ponencia-autor">
+                M.C. Sofía Beltrán · Universidad Autónoma Tecnológica
+              </p>
+              <p class="ponencia-resumen">
+                Medición experimental de ambos protocolos sobre redes inestables
+                con nodos alimentados por batería.
+              </p>
+              <a
+                class="btn btn-secundario"
+                href="ponencia-detalle.html?id=p-005"
+                >Ver detalle</a
+              >
+            </article>
+            <article
+              class="tarjeta ponencia-card"
+              id="p-006"
+              data-area="Ingeniería de software"
+            >
+              <span class="badge">Ingeniería de software</span>
+              <h3>Pruebas automatizadas para sistemas ciberfísicos</h3>
+              <p class="ponencia-autor">
+                Ing. Diego Camacho · Laboratorio de Software Industrial
+              </p>
+              <p class="ponencia-resumen">
+                Estrategia de integración continua con hardware simulado para
+                reducir errores antes del despliegue.
+              </p>
+              <a
+                class="btn btn-secundario"
+                href="ponencia-detalle.html?id=p-006"
+                >Ver detalle</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="sitio-pie" id="sitio-pie">
+      <div class="contenedor pie-contenido">
+        <div>
+          <p>
+            <strong
+              >Congreso Internacional de Ingeniería en Sistemas e IoT</strong
+            >
+          </p>
+          <p>
+            12 al 14 de noviembre de 2026 · Centro de Convenciones Tecnológico
+          </p>
+        </div>
+        <div>
+          <p>
+            Contacto:
+            <a href="mailto:contacto@congreso-sysiot.example"
+              >contacto@congreso-sysiot.example</a
+            >
+          </p>
+          <ul class="pie-enlaces">
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agenda del congreso por día, hora, tipo de evento y sala."
+    />
+    <title>
+      Programa | Congreso Internacional de Ingeniería en Sistemas e IoT
+    </title>
+
+    <!-- Tipografías (si no cargan, se usan las alternativas definidas en el CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="pagina-programa">
+    <a class="saltar-contenido" href="#contenido-principal"
+      >Saltar al contenido</a
+    >
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="sitio-encabezado" id="sitio-encabezado">
+      <div class="contenedor barra-nav">
+        <a class="logo" href="index.html">Congreso SysIoT 2026</a>
+        <nav aria-label="Navegación principal">
+          <ul class="menu-principal" id="menu-principal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html" aria-current="page">Programa</a></li>
+            <li><a href="ponencias.html">Ponencias</a></li>
+            <li><a href="memoria.html">Memoria</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li>
+              <a class="enlace-registro" href="registro.html">Registro</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section class="cabecera-pagina">
+        <div class="contenedor">
+          <h1>Programa</h1>
+          <p>
+            Consulta la agenda de los tres días por horario, tipo de evento y
+            sala.
+          </p>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <!-- BARRA DE FILTROS (solo diseño; la lógica se agregará con JavaScript) -->
+          <form
+            class="barra-filtros"
+            id="filtros-programa"
+            aria-label="Filtros de la agenda"
+          >
+            <div class="campo-filtro">
+              <label for="filtro-dia">Día</label>
+              <select id="filtro-dia" name="dia">
+                <option value="">Todos los días</option>
+                <option value="dia-1">Jueves 12 de noviembre</option>
+                <option value="dia-2">Viernes 13 de noviembre</option>
+                <option value="dia-3">Sábado 14 de noviembre</option>
+              </select>
+            </div>
+            <div class="campo-filtro">
+              <label for="filtro-tipo">Tipo de evento</label>
+              <select id="filtro-tipo" name="tipo">
+                <option value="">Todos los tipos</option>
+                <option value="keynote">Conferencia</option>
+                <option value="ponencia">Ponencia</option>
+                <option value="taller">Taller</option>
+                <option value="receso">Receso</option>
+              </select>
+            </div>
+            <div class="campo-filtro">
+              <label for="filtro-sala">Sala</label>
+              <select id="filtro-sala" name="sala">
+                <option value="">Todas las salas</option>
+                <option value="magna">Auditorio Magno</option>
+                <option value="sala-1">Sala 1</option>
+                <option value="sala-2">Sala 2</option>
+                <option value="laboratorio">Laboratorio de IoT</option>
+              </select>
+            </div>
+            <button
+              class="btn btn-contorno"
+              type="reset"
+              id="btn-limpiar-filtros"
+            >
+              Limpiar filtros
+            </button>
+          </form>
+
+          <!-- AGENDA -->
+          <div id="agenda">
+            <section class="dia-agenda" id="dia-1" data-dia="dia-1">
+              <h2>Jueves 12 de noviembre</h2>
+              <ul class="lista-sesiones">
+                <li
+                  class="sesion"
+                  data-dia="dia-1"
+                  data-tipo="keynote"
+                  data-sala="magna"
+                >
+                  <div class="sesion-hora">09:00<small>a 10:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-keynote">Conferencia</span>
+                    <h3>
+                      Inauguración y conferencia magistral: sistemas conectados
+                      a escala
+                    </h3>
+                    <p>
+                      Panorama de los retos de arquitectura en redes de millones
+                      de dispositivos.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Auditorio Magno</strong>Edificio A
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-1"
+                  data-tipo="ponencia"
+                  data-sala="sala-1"
+                >
+                  <div class="sesion-hora">10:30<small>a 12:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-ponencia">Ponencia</span>
+                    <h3>Mesa 1: Protocolos ligeros para IoT</h3>
+                    <p>
+                      Comparativa de MQTT, CoAP y LwM2M en redes con ancho de
+                      banda limitado.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Sala 1</strong>Edificio B
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-1"
+                  data-tipo="receso"
+                  data-sala="magna"
+                >
+                  <div class="sesion-hora">12:00<small>a 13:30</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-receso">Receso</span>
+                    <h3>Comida y networking</h3>
+                    <p>
+                      Tiempo libre para convivencia en el vestíbulo principal.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Vestíbulo</strong>Edificio A
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-1"
+                  data-tipo="taller"
+                  data-sala="laboratorio"
+                >
+                  <div class="sesion-hora">13:30<small>a 16:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-taller">Taller</span>
+                    <h3>Taller: Sensores y actuadores con ESP32</h3>
+                    <p>
+                      Construcción de un nodo de monitoreo ambiental paso a
+                      paso. Trae tu laptop.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Laboratorio de IoT</strong>Edificio C
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-1"
+                  data-tipo="ponencia"
+                  data-sala="sala-2"
+                >
+                  <div class="sesion-hora">16:30<small>a 18:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-ponencia">Ponencia</span>
+                    <h3>Mesa 2: Ciberseguridad en dispositivos embebidos</h3>
+                    <p>
+                      Amenazas comunes, actualizaciones seguras y arranque
+                      verificado.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Sala 2</strong>Edificio B
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="dia-agenda" id="dia-2" data-dia="dia-2">
+              <h2>Viernes 13 de noviembre</h2>
+              <ul class="lista-sesiones">
+                <li
+                  class="sesion"
+                  data-dia="dia-2"
+                  data-tipo="keynote"
+                  data-sala="magna"
+                >
+                  <div class="sesion-hora">09:00<small>a 10:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-keynote">Conferencia</span>
+                    <h3>Conferencia magistral: IA en el borde</h3>
+                    <p>
+                      Modelos compactos que se ejecutan directamente en
+                      microcontroladores.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Auditorio Magno</strong>Edificio A
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-2"
+                  data-tipo="ponencia"
+                  data-sala="sala-1"
+                >
+                  <div class="sesion-hora">10:30<small>a 12:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-ponencia">Ponencia</span>
+                    <h3>Mesa 3: Gemelos digitales y manufactura</h3>
+                    <p>
+                      Casos de simulación en línea para plantas industriales.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Sala 1</strong>Edificio B
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-2"
+                  data-tipo="taller"
+                  data-sala="laboratorio"
+                >
+                  <div class="sesion-hora">13:30<small>a 16:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-taller">Taller</span>
+                    <h3>Taller: Tableros de datos en tiempo real</h3>
+                    <p>
+                      Visualización de telemetría con bases de datos de series
+                      de tiempo.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Laboratorio de IoT</strong>Edificio C
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-2"
+                  data-tipo="ponencia"
+                  data-sala="sala-2"
+                >
+                  <div class="sesion-hora">16:30<small>a 18:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-ponencia">Ponencia</span>
+                    <h3>
+                      Mesa 4: Ingeniería de software para sistemas ciberfísicos
+                    </h3>
+                    <p>
+                      Pruebas, integración continua y trazabilidad de
+                      requisitos.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Sala 2</strong>Edificio B
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="dia-agenda" id="dia-3" data-dia="dia-3">
+              <h2>Sábado 14 de noviembre</h2>
+              <ul class="lista-sesiones">
+                <li
+                  class="sesion"
+                  data-dia="dia-3"
+                  data-tipo="ponencia"
+                  data-sala="sala-1"
+                >
+                  <div class="sesion-hora">09:30<small>a 11:00</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-ponencia">Ponencia</span>
+                    <h3>
+                      Mesa 5: Ciudades inteligentes y agricultura de precisión
+                    </h3>
+                    <p>
+                      Proyectos de sensado y riego automatizado con redes
+                      LoRaWAN.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Sala 1</strong>Edificio B
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-3"
+                  data-tipo="taller"
+                  data-sala="laboratorio"
+                >
+                  <div class="sesion-hora">11:30<small>a 13:30</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-taller">Taller</span>
+                    <h3>Taller: Seguridad básica para tu primer prototipo</h3>
+                    <p>
+                      Buenas prácticas de credenciales, cifrado y
+                      actualizaciones remotas.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Laboratorio de IoT</strong>Edificio C
+                  </div>
+                </li>
+                <li
+                  class="sesion"
+                  data-dia="dia-3"
+                  data-tipo="keynote"
+                  data-sala="magna"
+                >
+                  <div class="sesion-hora">14:00<small>a 15:30</small></div>
+                  <div class="sesion-info">
+                    <span class="badge badge-keynote">Conferencia</span>
+                    <h3>Panel de clausura y entrega de reconocimientos</h3>
+                    <p>
+                      Conclusiones del congreso y anuncio de la siguiente
+                      edición.
+                    </p>
+                  </div>
+                  <div class="sesion-sala">
+                    <strong>Auditorio Magno</strong>Edificio A
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="sitio-pie" id="sitio-pie">
+      <div class="contenedor pie-contenido">
+        <div>
+          <p>
+            <strong
+              >Congreso Internacional de Ingeniería en Sistemas e IoT</strong
+            >
+          </p>
+          <p>
+            12 al 14 de noviembre de 2026 · Centro de Convenciones Tecnológico
+          </p>
+        </div>
+        <div>
+          <p>
+            Contacto:
+            <a href="mailto:contacto@congreso-sysiot.example"
+              >contacto@congreso-sysiot.example</a
+            >
+          </p>
+          <ul class="pie-enlaces">
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Costos de inscripción para ponentes y participantes."
+    />
+    <title>
+      Pagos | Congreso Internacional de Ingeniería en Sistemas e IoT
+    </title>
+
+    <!-- Tipografías (si no cargan, se usan las alternativas definidas en el CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="pagina-pagos">
+    <a class="saltar-contenido" href="#contenido-principal"
+      >Saltar al contenido</a
+    >
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="sitio-encabezado" id="sitio-encabezado">
+      <div class="contenedor barra-nav">
+        <a class="logo" href="index.html">Congreso SysIoT 2026</a>
+        <nav aria-label="Navegación principal">
+          <ul class="menu-principal" id="menu-principal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="ponencias.html">Ponencias</a></li>
+            <li><a href="memoria.html">Memoria</a></li>
+            <li><a href="pagos.html" aria-current="page">Pagos</a></li>
+            <li>
+              <a class="enlace-registro" href="registro.html">Registro</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section class="cabecera-pagina">
+        <div class="contenedor">
+          <h1>Pagos</h1>
+          <p>Elige tu tipo de inscripción y continúa con el pago.</p>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <div class="contenedor">
+          <div class="contenedor-precios" id="contenedor-precios">
+            <article
+              class="tarjeta pricing-card"
+              id="precio-ponente"
+              data-tipo="ponente"
+            >
+              <h2>Ponente</h2>
+              <p class="precio">$1,500 <small>MXN</small></p>
+              <ul class="lista-beneficios">
+                <li>Presentación de tu ponencia</li>
+                <li>Publicación en la memoria</li>
+                <li>Constancia de ponente</li>
+                <li>Acceso a talleres y conferencias</li>
+              </ul>
+              <a
+                class="btn btn-secundario btn-bloque"
+                id="btn-pago-ponente"
+                href="https://www.paypal.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Proceder al pago</a
+              >
+            </article>
+
+            <article
+              class="tarjeta pricing-card destacada"
+              id="precio-participante"
+              data-tipo="participante"
+            >
+              <h2>Participante</h2>
+              <p class="precio">$800 <small>MXN</small></p>
+              <ul class="lista-beneficios">
+                <li>Acceso a conferencias y ponencias</li>
+                <li>Acceso a talleres (cupo limitado)</li>
+                <li>Constancia de asistencia</li>
+                <li>Modalidad presencial o virtual</li>
+              </ul>
+              <a
+                class="btn btn-principal btn-bloque"
+                id="btn-pago-participante"
+                href="https://www.paypal.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Proceder al pago</a
+              >
+            </article>
+          </div>
+
+          <p class="nota-pago">
+            ¿Aún no te registras?
+            <a href="registro.html">Completa el formulario de registro</a>.
+          </p>
+          <!-- Enlace temporal para ver el modal; después lo disparará el backend -->
+          <p class="nota-pago">
+            <a href="#modal-pago-exitoso" id="enlace-simular-pago"
+              >Ver ejemplo de confirmación de pago</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- MODAL: CONFIRMACIÓN DE PAGO EXITOSO
+         Se muestra con :target (#modal-pago-exitoso). Luego JS/PHP podrá abrirlo con la clase .is-open -->
+      <div
+        class="modal"
+        id="modal-pago-exitoso"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-titulo"
+      >
+        <div class="modal-contenido">
+          <div class="modal-icono" aria-hidden="true">✓</div>
+          <h2 id="modal-titulo">Pago recibido</h2>
+          <p>
+            Gracias por inscribirte. Te enviamos el comprobante a tu correo.
+          </p>
+          <div class="modal-resumen" id="modal-resumen">
+            <p>
+              <strong>Folio:</strong> <span id="pago-folio">SYS-2026-0001</span>
+            </p>
+            <p>
+              <strong>Concepto:</strong>
+              <span id="pago-concepto">Inscripción como participante</span>
+            </p>
+            <p><strong>Monto:</strong> <span id="pago-monto">$800 MXN</span></p>
+          </div>
+          <a
+            class="btn btn-principal btn-bloque"
+            href="index.html"
+            id="btn-cerrar-modal"
+            >Volver al inicio</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="sitio-pie" id="sitio-pie">
+      <div class="contenedor pie-contenido">
+        <div>
+          <p>
+            <strong
+              >Congreso Internacional de Ingeniería en Sistemas e IoT</strong
+            >
+          </p>
+          <p>
+            12 al 14 de noviembre de 2026 · Centro de Convenciones Tecnológico
+          </p>
+        </div>
+        <div>
+          <p>
+            Contacto:
+            <a href="mailto:contacto@congreso-sysiot.example"
+              >contacto@congreso-sysiot.example</a
+            >
+          </p>
+          <ul class="pie-enlaces">
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
